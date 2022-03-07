@@ -9,6 +9,9 @@ img {
   display: block;
   width: 100%;
 }
+.hidden{
+  display: none;
+}
 :root {
   --Light-Cyan: hsl(193, 38%, 86%);
   --Neon-Green: hsl(150, 100%, 66%);
@@ -41,6 +44,7 @@ body {
   gap: 1.125rem;
   box-shadow: hsl(218deg 22% 9%) 0px 30px 90px;
 }
+
 
 .advice__id {
   color: var(--Neon-Green);
@@ -77,8 +81,23 @@ body {
   box-shadow: var(--Neon-Green) 0px 10px 76px 13px;
 }
 
-@media (max-width: 580px) {
-  .advice__container {
-    width: 90%;
+.error{
+  position: absolute;
+  top:5%;
+  left: 50%;
+  background-color:var(--Dark-Grayish-Blue) ;
+  text-align: center;
+  padding: 10px 20px;
+  color:#ff5a5a;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+@media (max-width:600px) {
+  .advice__container{
+    width: 80%;
   }
 }

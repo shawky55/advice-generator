@@ -1,20 +1,27 @@
-const ADVICE_CONTENT = document.querySelector('.advice__content');
+const ADVICE_CONTENT = document.querySelector('.advice__content p');
 const ADVICE_ID = document.getElementById('adviceid');
 const ADVICE_BUTTON = document.querySelector('.advice__button');
-console.log('hi');
-function newAdvice() {
-  let request = new XMLHttpRequest();
-  request.open('GET', 'https://api.adviceslip.com/advice');
-  request.send();
-  request.addEventListener('load',()=>{
-    let {
-      slip: { id, advice },
-    } = JSON.parse(request.responseText);
-    ADVICE_CONTENT.textContent = advice;
+const errorMessage=document.querySelector('.error');
+let adviceData;
+function renderAdvice(id,adviceText){
+    ADVICE_CONTENT.textContent = adviceText;
     ADVICE_ID.textContent = id;
-  });
+    errorMessage.classList.add("hidden")
 }
 
-ADVICE_BUTTON.addEventListener('click', function () {
+const newAdvice=()=>{
+ fetch('https://api.adviceslip.com/advice')
+ .then((respone)=>respone.json())
+ .then((data)=>{
+let { slip: {id,advice} } = data;
+renderAdvice(id,advice);
+  }).catch(function(error){
+error.message='lose connection';
+errorMessage.classList.remove('hidden')
+  });
+
+}
+
+ADVICE_BUTTON.addEventListener('click', ()=> {
   newAdvice();
 });
