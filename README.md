@@ -37,5 +37,5 @@ Users should be able to:
 
 # useful-resources
 
-- API :![Adivce slip api](https://api.adviceslip.com/)
+- API :[Adivce slip api](https://api.adviceslip.com/)
 
