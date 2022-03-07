@@ -3,6 +3,7 @@ const ADVICE_ID = document.getElementById('adviceid');
 const ADVICE_BUTTON = document.querySelector('.advice__button');
 const errorMessage=document.querySelector('.error');
 let adviceData;
+ADVICE_CONTENT.textContent="it is easy to sit up and take notice,what's difficutl is getting up and taking action."
 function renderAdvice(id,adviceText){
     ADVICE_CONTENT.textContent = adviceText;
     ADVICE_ID.textContent = id;
