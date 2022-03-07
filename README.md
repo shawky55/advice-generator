@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live Site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/shawky55/advice-generator/)
+- Live Site URL: [Live Site URL](https://shawky55.github.io/advice-generator/)
 
 
 
